@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d11e1e;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.contenido-principal {
+    padding: 20px;
+}
+
+.banner-gaming {
+    background-image: url('https://via.placeholder.com/1200x200');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-banner {
+    background-color: rgba(183, 16, 16, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.banner-gaming h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-gaming p {
+    font-size: 16px;
+}
+
+.info-tienda {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.barra-filtros {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.elemento-filtro {
+    display: flex;
+    flex-direction: column;
+}
+
+.elemento-filtro label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.barra-filtros input,
+.barra-filtros select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lista-productos {
+    text-align: center;
+}
+
+.lista-productos h2 {
+    font-size: 36px;
+    color: #d11e1e;
+    margin-bottom: 20px;
+}
+
+.rejilla-productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+    background-color: #fff;
+    border: 1px solid #d11e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 18px;
+    color: #d11e1e;
+    margin-bottom: 5px;
+}
+
+.tarjeta-producto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.tarjeta-producto .precio {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-agregar-carrito {
+    background-color: #d11e1e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-agregar-carrito:hover {
+    background: #900;
+}
+
+.footer {
+    background-image: linear-gradient(to right, #d11e1e, #ff6666);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

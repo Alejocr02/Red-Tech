@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d11e1e;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.contenido-principal {
+    padding: 20px;
+}
+
+.seccion-hero {
+    background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-hero {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.seccion-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.seccion-hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d11e1e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.zona-gaming {
+    background-image: url('https://via.placeholder.com/1200x200');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-gaming {
+    background-color: rgba(183, 16, 16, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.zona-gaming h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.productos-destacados {
+    text-align: center;
+}
+
+.productos-destacados h2 {
+    font-size: 36px;
+    color: #d11e1e;
+    margin-bottom: 20px;
+}
+
+.rejilla-productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+    background-color: #fff;
+    border: 1px solid #d11e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 18px;
+    color: #d11e1e;
+    margin-bottom: 5px;
+}
+
+.tarjeta-producto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.tarjeta-producto .precio {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-agregar-carrito {
+    background-color: #d11e1e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-agregar-carrito:hover {
+    background: #900;
+}
+
+.footer {
+    background-image: linear-gradient(to right, #d11e1e, #ff6666);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

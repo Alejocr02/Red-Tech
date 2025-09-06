@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedTech Store</title>
+    <link rel="stylesheet" href="pago.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">RedTech Store</div>
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="agregar.html">Agregar</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="pago.html">Pago</a>
+            <a href="registro.html">Registro</a>
+        </nav>
+    </header>
+    <main class="container">
+			<div class="toolbar">
+				<h2>Pasarela de pago</h2>
+				<div class="actions">
+					<button id="btnLogout" class="btn">Cerrar sesión</button>
+				</div>
+			</div>
+
+			<section id="loginSection" class="card">
+				<h3>Iniciar sesión</h3>
+				<form id="formLogin" class="form">
+					<label>
+						Usuario
+						<input type="text" id="loginUsuario" required />
+					</label>
+					<label>
+						Contraseña
+						<input type="password" id="loginContrasena" required />
+					</label>
+					<div class="actions">
+						<button type="submit" class="btn primary">Ingresar</button>
+						<a href="./registro.html" class="btn">Crear cuenta</a>
+					</div>
+				</form>
+			</section>
+
+			<section id="pagoSection" class="card hidden">
+				<h3>Confirmar pago</h3>
+				<p class="muted">
+					Total a pagar: <strong id="montoPagar">$0.00</strong>
+				</p>
+				<form id="formPago" class="form">
+					<label>
+						Código de pago del usuario
+						<input
+							type="text"
+							id="codigoPago"
+							required
+							placeholder="Ingresa tu código"
+						/>
+					</label>
+					<div class="actions">
+						<button type="submit" class="btn primary">Pagar</button>
+					</div>
+				</form>
+			</section>
+		</main>
+
+		<script src="./js/storage.js"></script>
+		<script src="./js/auth.js"></script>
+		<script src="./js/utils/toast.js"></script>
+		<script src="./js/nav-auth.js"></script>
+		<script src="./js/pago.js"></script>
+        <footer class="footer">
+        <p>© 2025 RedTech Store. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito - RedTech Store</title>
-    <link rel="stylesheet" href="carrito.css">
+    <title>RedTech Store</title>
+    <link rel="stylesheet" href="productos.css">
 </head>
 <body>
     <header class="header">
@@ -14,35 +14,27 @@
             <a href="agregar.html">Agregar</a>
             <a href="productos.html">Productos</a>
             <a href="carrito.html">Carrito</a>
-			<a href="pago.html">Pago</a>
-			<a href="registro.html">Registro</a>
+            <a href="pago.html">Pago</a>
+            <a href="registro.html">Registro</a>
         </nav>
     </header>
-
     <main class="container">
 			<div class="toolbar">
-				<h2>Carrito</h2>
-				<div class="actions">
-					<button id="btnVaciar" class="btn danger">Vaciar carrito</button>
-				</div>
+				<h2>Productos</h2>
+				<button id="btnLimpiarProductos" class="btn danger">
+					Eliminar todos
+				</button>
 			</div>
-
-			<ul id="listaCarrito" class="cart-list"></ul>
-
-			<div class="total-row">
-				<span>Total:</span>
-				<strong id="total">$0.00</strong>
-			</div>
-
-			<div class="actions right-actions">
-				<a href="./pago.html" class="btn primary" id="btnIrPagar">Ir a pagar</a>
-			</div>
+			<div id="listaProductos" class="grid"></div>
+			<p id="vacio" class="muted hidden">
+				No hay productos. Agrega uno desde la página "Agregar".
+			</p>
 		</main>
-      <script src="./js/storage.js"></script>
+        <script src="./js/storage.js"></script>
 		<script src="./js/auth.js"></script>
 		<script src="./js/utils/toast.js"></script>
 		<script src="./js/nav-auth.js"></script>
-		<script src="./js/carrito.js"></script>
+		<script src="./js/productos.js"></script>
     <footer class="footer">
         <p>© 2025 RedTech Store. Todos los derechos reservados.</p>
     </footer>

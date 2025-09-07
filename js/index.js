@@ -2,12 +2,12 @@
 (function () {
 	// Obtiene la referencia al formulario con id "formProducto"
 	const form = document.getElementById("formProducto");
-	// Si no existe el formulario en la página, termina para evitar errores
-	if (!form) return;
-
-	// Escucha el evento "submit" del formulario para manejar el envío personalizado
-	form.addEventListener("submit", (e) => {
-		// Evita que el formulario envíe y recargue la página por defecto
+	
+	// Solo maneja el formulario si existe
+	if (form) {
+		// Escucha el evento "submit" del formulario para manejar el envío personalizado
+		form.addEventListener("submit", (e) => {
+			// Evita que el formulario envíe y recargue la página por defecto
 		e.preventDefault();
 
 		// Lee y recorta espacios de los campos del formulario
@@ -51,5 +51,27 @@
 		}
 		// Redirige a la página de productos sin parámetros en la URL
 		window.location.href = "./productos.html";
+	});
+	}
+	
+	// Inicialización del indicador de usuario al cargar la página (SIEMPRE se ejecuta)
+	document.addEventListener('DOMContentLoaded', function() {
+		// Actualizar indicador de usuario
+		if (window.updateIndicator) {
+			window.updateIndicator();
+		}
+		
+		// Mostrar toast flash si existe
+		try {
+			const flashToast = sessionStorage.getItem("flashToast");
+			if (flashToast) {
+				sessionStorage.removeItem("flashToast");
+				if (window.Toast?.show) {
+					Toast.show(flashToast);
+				}
+			}
+		} catch (err) {
+			console.warn("Error al mostrar toast flash:", err);
+		}
 	});
 })();

@@ -31,8 +31,10 @@ function registerUser(user){
 			codigo: String(user.codigo).trim(),
 			celular: String(user.celular).trim(),
 		});
-  writeArray(KEYS.users, users);
+  const saved = writeArray(KEYS.users, users);
+  return saved ? { ok: true } : { ok: false, error: "No se pudo guardar el usuario" };
 }
+
 
 function writeArray(key, arr) {
 		try {
@@ -59,7 +61,7 @@ function writeArray(key, arr) {
     try {
 			localStorage.setItem(
 				KEYS.session,
-				JSON.stringify({ username: String(usuario).trim() })
+				JSON.stringify({ usuario: String(usuario).trim(), username: String(usuario).trim() })
 			);
 			return true;
 		} catch {
@@ -86,7 +88,7 @@ function writeArray(key, arr) {
   validateLogin,
   setSessionUser,
   getCurrentUser,
-  logoutUser
+  logout: logoutUser
 };
 
 })();

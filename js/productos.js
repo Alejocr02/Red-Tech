@@ -97,4 +97,9 @@
 
 	// Renderiza los productos al cargar el script/página
 	renderProductos();
+	
+	// Actualizar indicador de usuario al cargar la página
+	if (window.updateIndicator) {
+		window.updateIndicator();
+	}
 })();

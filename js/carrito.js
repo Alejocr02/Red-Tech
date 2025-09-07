@@ -111,4 +111,25 @@
 
 	// Inicializa la vista del carrito al cargar el script
 	renderCarrito();
+	
+	// Inicialización del indicador de usuario al cargar la página
+	document.addEventListener('DOMContentLoaded', function() {
+		// Actualizar indicador de usuario
+		if (window.updateIndicator) {
+			window.updateIndicator();
+		}
+		
+		// Mostrar toast flash si existe
+		try {
+			const flashToast = sessionStorage.getItem("flashToast");
+			if (flashToast) {
+				sessionStorage.removeItem("flashToast");
+				if (window.Toast?.show) {
+					Toast.show(flashToast);
+				}
+			}
+		} catch (err) {
+			console.warn("Error al mostrar toast flash:", err);
+		}
+	});
 })();

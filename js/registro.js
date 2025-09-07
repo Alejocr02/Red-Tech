@@ -10,13 +10,11 @@ formRegistro?.addEventListener("submit", (e) => {
     const codigo = document.getElementById("codigo").value.trim();
     const celular = document.getElementById("celular").value.trim();
 
-    //validacion
     if(!usuario || !contrasena || !codigo || !celular){
         Toast.show("Completa todos los campos");
         return;
     }
 
-    //verificar existencia del usuario
     const api = window.Auth || window.Storage;
     const result = api.registerUser({
         usuario,
@@ -30,9 +28,42 @@ formRegistro?.addEventListener("submit", (e) => {
         return;
     }
     
-    Toast.show("Usuario registrado con éxito");
-    form.reset();
+    if (result && result.ok === true) {
+        api.setSessionUser(usuario);   
+        if (typeof updateIndicator === 'function') {
+            updateIndicator();
+        }   
+        Toast.show(`¡Bienvenido ${usuario}! Registro exitoso`);
+        formRegistro.reset();
+        setTimeout(() => {
+            window.location.href = "./productos.html";
+        }, 2000);
+    } else {
+        Toast.show("Usuario registrado con éxito");
+        formRegistro.reset();
+    }
 
  })
+
+// Inicialización al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Actualizar indicador de usuario al cargar la página
+    if (window.updateIndicator) {
+        window.updateIndicator();
+    }
+    
+    // Mostrar toast flash si existe (para mensajes entre páginas)
+    try {
+        const flashToast = sessionStorage.getItem("flashToast");
+        if (flashToast) {
+            sessionStorage.removeItem("flashToast");
+            if (window.Toast?.show) {
+                Toast.show(flashToast);
+            }
+        }
+    } catch (err) {
+        console.warn("Error al mostrar toast flash:", err);
+    }
+});
 
 })();

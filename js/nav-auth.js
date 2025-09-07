@@ -38,7 +38,7 @@ function updateIndicator() {
 		if (api?.getCurrentUser) {
 			const u = api.getCurrentUser();
 			if (u?.usuario) {
-				text = `👤 ${u.usuario}`;
+				text = `👤${u.usuario}`;
 				logged = true;
 			}
 		}
@@ -46,4 +46,6 @@ function updateIndicator() {
 		el.classList.toggle("logged", logged);
 		if (btnLogout) btnLogout.classList.toggle("hidden", !logged);
 	}
+
+	window.updateIndicator = updateIndicator;
 })();

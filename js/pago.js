@@ -97,4 +97,12 @@
 	})();
 
 	updateUI();
+	
+	// Inicialización del indicador de usuario al cargar la página
+	document.addEventListener('DOMContentLoaded', function() {
+		// Actualizar indicador de usuario
+		if (window.updateIndicator) {
+			window.updateIndicator();
+		}
+	});
 })();

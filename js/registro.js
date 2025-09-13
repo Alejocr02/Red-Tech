@@ -45,14 +45,11 @@ formRegistro?.addEventListener("submit", (e) => {
 
  })
 
-// Inicialización al cargar la página
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Actualizar indicador de usuario al cargar la página
     if (window.updateIndicator) {
         window.updateIndicator();
     }
-    
-    // Mostrar toast flash si existe (para mensajes entre páginas)
     try {
         const flashToast = sessionStorage.getItem("flashToast");
         if (flashToast) {

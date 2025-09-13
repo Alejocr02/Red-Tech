@@ -11,8 +11,8 @@
 }
 
   const KEYS = {
-		users: "tienda.users",
-		session: "tienda.session", // { username }
+    users: "tienda.users",
+    session: "tienda.session"
 }
 
 function getUser(){

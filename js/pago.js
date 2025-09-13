@@ -1,5 +1,4 @@
 (function () {
-	// UI elements
 	const loginSection = document.getElementById("loginSection");
 	const pagoSection = document.getElementById("pagoSection");
 	const formLogin = document.getElementById("formLogin");
@@ -21,7 +20,6 @@
 		}
 	}
 
-	// If coming from carrito and no items, hint
 	(function flash() {
 		try {
 			const msg = sessionStorage.getItem("flashToast");
@@ -72,7 +70,7 @@
 		}
 
 		if (codigo === user.codigo) {
-			// Simula pago exitoso
+
 			Storage.clearCart();
 			Toast.show("Pago exitoso");
 			try {
@@ -84,7 +82,6 @@
 		}
 	});
 
-	// If arriving from carrito, encourage login if no session
 	(function enforceLoginIfNeeded() {
 		const total = Storage.getCartTotal();
 		const api = window.Auth || window.Storage;
@@ -98,9 +95,8 @@
 
 	updateUI();
 	
-	// Inicialización del indicador de usuario al cargar la página
 	document.addEventListener('DOMContentLoaded', function() {
-		// Actualizar indicador de usuario
+
 		if (window.updateIndicator) {
 			window.updateIndicator();
 		}

@@ -1,5 +1,5 @@
 (function(){
-  function ensureLogoutButton() {
+function ensureLogoutButton() {
 		const nav = document.querySelector(".topbar nav");
 		if (!nav) return null;
 		let btn = nav.querySelector("#btnNavLogout");

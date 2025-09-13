@@ -28,8 +28,6 @@ body {
     font-weight: bold;
 }
 
-
-/* Estilos para indicador de usuario y autenticación */
 .topbar .nav {
     display: flex;
     align-items: center;
@@ -50,7 +48,7 @@ body {
 }
 
 #userIndicator.logged {
-    color: #333;
+    padding: 4px 8px;
 }
 
 .btn.nav-logout {

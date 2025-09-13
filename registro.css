@@ -28,7 +28,6 @@ body {
     font-weight: bold;
 }
 
-/* Estilos para indicador de usuario y autenticación */
 .topbar .nav {
     display: flex;
     align-items: center;
@@ -38,14 +37,14 @@ body {
     display: flex;
     align-items: center;
     margin-right: 15px;
+    padding: 4px 8px;
     font-weight: bold;
     font-size: 14px;
     color: #333;
 }
 
-#userIndicator .divider {
-    margin: 0 8px;
-    color: #666;
+#userIndicator.logged {
+    padding: 4px 8px;
 }
 
 #userIndicator.logged {

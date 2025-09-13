@@ -67,4 +67,21 @@
 	if (window.updateIndicator) {
 		window.updateIndicator();
 	}
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		if (window.updateIndicator) {
+			window.updateIndicator();
+		}
+		try {
+			const flashToast = sessionStorage.getItem("flashToast");
+			if (flashToast) {
+				sessionStorage.removeItem("flashToast");
+				if (window.Toast?.show) {
+					Toast.show(flashToast);
+				}
+			}
+		} catch (err) {
+			console.warn("Error al mostrar toast flash:", err);
+		}
+	});
 })();

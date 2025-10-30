@@ -17,36 +17,42 @@
                 <a href="carrito.html">Carrito</a> 
                 <a href="pago.html">Pago</a>
                 <a href="registro.html" class="active">Registro</a>
+                <a href="iniciarsesion.html">Iniciar Sesión</a>
                 <span id="userIndicator">Invitado</span>
             </nav>
         </div>
     </header>
-    <main class="container">
-			<div class="toolbar">
-				<h2>Carrito</h2>
-				<div class="actions">
-					<button id="btnVaciar" class="btn danger">Vaciar carrito</button>
-				</div>
-			</div>
+    
+    <main class="contenido-principal">
+        <div class="container">
+            <div class="toolbar">
+                <h2>Carrito</h2>
+                <div class="actions">
+                    <button id="btnVaciar" class="btn danger">Vaciar carrito</button>
+                </div>
+            </div>
 
-			<ul id="listaCarrito" class="cart-list"></ul>
+            <ul id="listaCarrito" class="cart-list"></ul>
 
-			<div class="total-row">
-				<span>Total:</span>
-				<strong id="total">$0.00</strong>
-			</div>
+            <div class="total-row">
+                <span>Total:</span>
+                <strong id="total">$0.00</strong>
+            </div>
 
-			<div class="actions right-actions">
-				<a href="./pago.html" class="btn primary" id="btnIrPagar">Ir a pagar</a>
-			</div>
-		</main>
-      <script src="./js/storage.js"></script>
-		<script src="./js/auth.js"></script>
-		<script src="./js/utils/toast.js"></script>
-		<script src="./js/nav-auth.js"></script>
-		<script src="./js/carrito.js"></script>
+            <div class="actions right-actions">
+                <a href="./pago.html" class="btn primary" id="btnIrPagar">Ir a pagar</a>
+            </div>
+        </div>
+    </main>
+    
     <footer class="footer">
         <p>© 2025 RedTech Store. Todos los derechos reservados.</p>
     </footer>
+    
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/utils/toast.js"></script>
+    <script src="./js/nav-auth.js"></script>
+    <script src="./js/carrito.js"></script>
 </body>
 </html>

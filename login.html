@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - RedTech Store</title>
+    <link rel="stylesheet" href="iniciarsesion.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">RedTech Store</div>
+        <div class="topbar">
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="agregar.html">Agregar</a>
+                <a href="productos.html">Productos</a>
+                <a href="carrito.html">Carrito</a> 
+                <a href="pago.html">Pago</a>
+                <a href="registro.html" class="active">Registro</a>
+                <a href="iniciarsesion.html">Iniciar Sesión</a>
+                <span id="userIndicator">Invitado</span>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="contenido-principal">
+        <div class="container">
+            <div>
+                <h2>Iniciar sesión</h2>
+                <p class="hint">Ingresa tus credenciales para acceder a tu cuenta</p>
+                <form id="frm" class="form">
+                    <label>
+                        Usuario
+                        <input 
+                            id="email"
+                            type="text"
+                            placeholder="Ingresa tu nombre de usuario"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Contraseña
+                        <input 
+                            id="password"
+                            type="password"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        />
+                    </label>
+                    <div class="actions">
+                        <button type="submit" class="btn primary">
+                            Ingresar
+                        </button>
+                        <a href="registro.html" class="btn">¿No tienes cuenta? Regístrate</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 RedTech Store. Todos los derechos reservados.</p>
+    </footer>
+		<script type="module" src="../js/pages/login.page.js"></script>
+	</body>
+</html>

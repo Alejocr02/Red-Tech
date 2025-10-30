@@ -17,29 +17,102 @@
                 <a href="carrito.html">Carrito</a>
                 <a href="pago.html">Pago</a>
                 <a href="registro.html" class="active">Registro</a>
+                <a href="iniciarsesion.html">Iniciar Sesión</a>
                 <span id="userIndicator">Invitado</span>
             </nav>
         </div>
     </header>
-    <main class="container">
-			<div class="toolbar">
-				<h2>Productos</h2>
-				<button id="btnLimpiarProductos" class="btn danger">
-					Eliminar todos
-				</button>
-			</div>
-			<div id="listaProductos" class="grid"></div>
-			<p id="vacio" class="muted hidden">
-				No hay productos. Agrega uno desde la página "Agregar".
-			</p>
-		</main>
-        <script src="./js/storage.js"></script>
-		<script src="./js/auth.js"></script>
-		<script src="./js/utils/toast.js"></script>
-		<script src="./js/nav-auth.js"></script>
-		<script src="./js/productos.js"></script>
+
+    <main class="contenido-principal">
+        <section class="banner-gaming">
+            <div class="contenido-banner">
+                <h1>¡Bienvenido a la Zona Gaming!</h1>
+                <p>Descubre los mejores productos y accesorios para gamers. ¡Potencia tu experiencia al máximo!</p>
+            </div>
+        </section>
+
+        <section class="info-tienda">
+            <p>En RedTech Store, encontrarás la mejor selección de tecnología y gaming, con productos de las marcas más reconocidas y la garantía de un servicio especializado.</p>
+            <p>Explora nuestras categorías, filtra por tus marcas favoritas y aprovecha las ofertas exclusivas para llevar tu setup al siguiente nivel.</p>
+        </section>    
+        
+        <section class="lista-productos">
+            <h2>Productos</h2>
+            <div class="rejilla-productos">
+                <div class="tarjeta-producto"> 
+                    <img src="src/descarga.jpg" alt="Mouse Gamer Logitech G502">
+                    <h3>Mouse Gamer <br>Logitech G502</h3>
+                    <p>Alta precisión, RGB, 11 botones programables.</p>
+                    <p class="precio">$50.000</p>
+                    <button class="btn-agregar-carrito" data-name="Mouse Gamer Logitech G502" data-price="50000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="src/descarga (teclado).jpg" alt="Teclado Mecánico Razer BlackWidow">
+                    <h3>Teclado Mecánico <br>Razer BlackWidow</h3>
+                    <p>Switches verdes, retroiluminación RGB.</p>
+                    <p class="precio">$120.000</p>
+                    <button class="btn-agregar-carrito" data-name="Teclado Mecánico Razer BlackWidow" data-price="120000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="src/Corsair(diademas).jpg" alt="Headset Corsair Void RGB">
+                    <h3>Headset Corsair <br>Void RGB</h3>
+                    <p>Sonido envolvente 7.1, inalámbrico.</p>                        
+                    <p class="precio">$90.000</p>
+                    <button class="btn-agregar-carrito"  data-name="Headset Corsair Void RGB" data-price="90000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="src/descarga (silla).jpg" alt="Silla ASUS ROG Chariot">
+                    <h3>Silla ASUS ROG <br>Chariot</h3>
+                    <p>Ergonómica, soporte lumbar, diseño gamer.</p>
+                    <p class="precio">$150.000</p>
+                    <button class="btn-agregar-carrito" data-name="Silla ASUS ROG Chariot" data-price="150000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">                        
+                    <img src="src/descarga (monitor).jpg" alt="Monitor Corsair XENEON 32QHD165">
+                    <h3>Monitor Corsair <br>XENEON 32QHD165</h3>
+                    <p>32", 165Hz, QHD, HDR400.</p>
+                    <p class="precio">$300.000</p>
+                    <button class="btn-agregar-carrito" data-name="Monitor Corsair XENEON 32QHD165" data-price="300000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">                        
+                    <img src="src/descarga (1).jpg" alt="Webcam Logitech C920">
+                    <h3>Webcam Logitech <br>C920</h3>
+                    <p>Full HD 1080p, micrófono estéreo.</p>
+                    <p class="precio">$50.000</p>
+                    <button class="btn-agregar-carrito" data-name="Webcam Logitech C920" data-price="50000">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="src/descarga (capturadora).jpg" alt="Capturadora Razer Ripsaw HD">
+                    <h3>Capturadora Razer <br>Ripsaw HD</h3>
+                    <p>Streaming 4K60 Pro, bajo latencia.</p>
+                    <p class="precio">$120.000</p>
+                    <button class="btn-agregar-carrito" data-name="Capturadora Razer Ripsaw HD" data-price="120000">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="toolbar">
+                <h2>Productos Dinámicos</h2>
+                <button id="btnLimpiarProductos" class="btn danger">
+                    Eliminar todos
+                </button>
+            </div>
+            <div id="listaProductos" class="grid"></div>
+            <p id="vacio" class="muted hidden">
+                No hay productos. Agrega uno desde la página "Agregar".
+            </p>
+        </div>
+    </main>
+    
     <footer class="footer">
         <p>© 2025 RedTech Store. Todos los derechos reservados.</p>
     </footer>
+    
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/utils/toast.js"></script>
+    <script src="./js/nav-auth.js"></script>
+    <script src="./js/productos.js"></script>
 </body>
 </html>

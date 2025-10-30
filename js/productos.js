@@ -49,6 +49,36 @@
 		}
 	});
 
+	// Manejar botones estáticos de agregar al carrito
+	document.addEventListener("click", (e) => {
+		const btn = e.target.closest(".btn-agregar-carrito");
+		if (!btn) return;
+		
+		const name = btn.getAttribute("data-name");
+		const price = btn.getAttribute("data-price");
+		
+		if (!name || !price) return;
+		
+		const producto = {
+			id: Date.now() + Math.random(), // ID único
+			nombre: name,
+			precio: Number(price),
+			descripcion: btn.closest('.tarjeta-producto')?.querySelector('p:not(.precio)')?.textContent || '',
+			imagen: btn.closest('.tarjeta-producto')?.querySelector('img')?.src || ''
+		};
+		
+		Storage.addToCart(producto);
+		
+		if (window.Toast && typeof Toast.show === "function") {
+			Toast.show("Producto agregado al carrito");
+		}
+		
+		// Actualizar indicador del carrito si existe
+		if (window.updateIndicator) {
+			window.updateIndicator();
+		}
+	});
+
 	btnLimpiar.addEventListener("click", async () => {
 		const ok = await (window.Toast?.confirm
 			? Toast.confirm("¿Eliminar todos los productos?", {

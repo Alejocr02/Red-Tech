@@ -32,8 +32,7 @@ function ensureLogoutButton() {
 function updateIndicator() {
 		const el = document.querySelector(".topbar nav #userIndicator");
 		const btnLogout = ensureLogoutButton();
-		// Simplificar los selectores
-		const loginLink = document.querySelector("a[href*='iniciarsesion']");
+		const loginLink = document.querySelector("a[href*='login']") || document.querySelector("a[href*='iniciarsesion']");
 		const registroLink = document.querySelector("a[href*='registro']");
 		
 		if (!el) {
@@ -56,12 +55,10 @@ function updateIndicator() {
 		el.textContent = text;
 		el.classList.toggle("logged", logged);
 		
-		// Mostrar/ocultar botón de logout
 		if (btnLogout) {
 			btnLogout.classList.toggle("hidden", !logged);
 		}
 		
-		// Ocultar enlaces de login y registro cuando esté logueado
 		if (loginLink) {
 			loginLink.style.display = logged ? "none" : "";
 		}
@@ -69,7 +66,6 @@ function updateIndicator() {
 			registroLink.style.display = logged ? "none" : "";
 		}
 		
-		// Actualizar UI de pago si estamos en esa página
 		if (window.updatePagoUI && typeof window.updatePagoUI === 'function') {
 			window.updatePagoUI();
 		}
@@ -77,19 +73,14 @@ function updateIndicator() {
 
 	window.updateIndicator = updateIndicator;
 	
-	// Ejecutar cuando se carga la página
 	document.addEventListener('DOMContentLoaded', function() {
-		// Esperar un poco para que todos los scripts se carguen
 		setTimeout(function() {
 			updateIndicator();
 		}, 100);
 	});
 	
-	// También ejecutar inmediatamente si el DOM ya está listo
 	if (document.readyState === 'loading') {
-		// Aún cargando, esperar al DOMContentLoaded
 	} else {
-		// DOM ya está listo
 		setTimeout(function() {
 			updateIndicator();
 		}, 100);

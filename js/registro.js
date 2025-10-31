@@ -45,7 +45,6 @@
                 const errorMsg = result.error || "El usuario ya existe";
                 console.log("Error en registro:", errorMsg);
                 
-                // Intentar múltiples formas de mostrar el mensaje
                 if (window.Toast && window.Toast.show) {
                     window.Toast.show(errorMsg);
                     console.log("Mensaje mostrado con Toast");

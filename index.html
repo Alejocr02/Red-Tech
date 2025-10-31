@@ -17,16 +17,17 @@
                 <a href="carrito.html">Carrito</a> 
                 <a href="pago.html">Pago</a>
                 <a href="registro.html" class="active">Registro</a>
-                <a href="iniciarsesion.html">Iniciar Sesión</a>
+                <a href="login.html" >Iniciar Sesión</a>
                 <span id="userIndicator">Invitado</span>
             </nav>
         </div>
     </header>
-    <main class="contenido-principal">
+        <main class="contenido-principal">
             <section class="seccion-hero">
                 <div class="contenido-hero">
                     <h1>¡Bienvenido a RedTech!</h1>
-                    <p>Descubre las mejores ofertas en tecnología y participa en nuestros eventos exclusivos.</p>
+                    <p>Los mejores productos en tecnología del mercado aquí y ahora,
+                     descubre las mejores ofertas y participa en nuestros eventos exclusivos.</p>
                     <a href="productos.html" class="btn">VER PRODUCTOS</a>
                 </div>
             </section>
@@ -36,12 +37,52 @@
                     <p>Potencia tu experiencia con los mejores productos y accesorios para gamers.</p>
                 </div>
             </section>
-           
+            <section class="productos-destacados">
+                <h2>Productos Destacados</h2>
+                <div class="rejilla-productos">
+                    <div class="tarjeta-producto">
+                        <img src="src/descarga.jpg" alt="Mouse Gamer Logitech G502">
+                        <h3>Mouse Gamer <br>Logitech G502</h3>
+                        <p>Alta precisión, RGB, 11 botones programables.</p>
+                        <p class="precio">$50.000</p>
+                        <button class="btn-agregar-carrito" data-name="Mouse Gamer Logitech G502" data-price="50000">Agregar al carrito</button>
+                    </div>
+                    <div class="tarjeta-producto">
+                        <img src="src/Corsair(diademas).jpg" alt="Headset Corsair Void RGB">
+                        <h3>Headset Corsair <br>Void RGB</h3>
+                        <p>Sonido envolvente 7.1, inalámbrico.</p>
+                        <p class="precio">$90.000</p>
+                        <button class="btn-agregar-carrito" data-name="Headset Corsair Void RGB" data-price="90000">Agregar al carrito</button>
+                    </div>
+                    <div class="tarjeta-producto">
+                        <img src="src/descarga (silla).jpg" alt="Silla ASUS ROG Chariot">
+                        <h3>Silla ASUS ROG <br>Chariot</h3>
+                        <p>Ergonómica, soporte lumbar, diseño gamer.</p>
+                        <p class="precio">$150.000</p>
+                        <button class="btn-agregar-carrito" data-name="Silla ASUS ROG Chariot" data-price="150000">Agregar al carrito</button>
+                    </div>
+                    <div class="tarjeta-producto">
+                        <img src="src/descarga (monitor).jpg" alt="Monitor Corsair XENEON 32QHD165">
+                        <h3>Monitor Corsair <br>XENEON 32QHD165</h3>
+                        <p>32", 165Hz, QHD, HDR400.</p>
+                        <p class="precio">$300.000</p>
+                        <button class="btn-agregar-carrito" data-name="Monitor Corsair XENEON 32QHD165" data-price="300000">Agregar al carrito</button>
+                    </div>
+                    <div class="tarjeta-producto">
+                        <img src="src/descarga (1).jpg" alt="Webcam Logitech C920">
+                        <h3>Webcam Logitech <br>C920</h3>
+                        <p>Full HD 1080p, micrófono estéreo.</p>
+                        <p class="precio">$89.000</p>
+                        <button class="btn-agregar-carrito" data-name="Webcam Logitech C920" data-price="89000">Agregar al carrito</button>
+                    </div>
+                </div>
+            </section>
     </main>
     <script src="./js/storage.js"></script>
     <script src="./js/auth.js"></script>
     <script src="./js/utils/toast.js"></script>
     <script src="./js/nav-auth.js"></script>
+    <script src="./js/productos.js"></script>
     <script src="./js/index.js"></script>
     <footer class="footer">
         <p>© 2025 RedTech Store. Todos los derechos reservados.</p>

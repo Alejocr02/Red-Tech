@@ -15,20 +15,16 @@
 		}
 
 		if (user && user.usuario) {
-			// Usuario logueado: mostrar sección de pago
 			if (loginSection) loginSection.classList.add("hidden");
 			if (pagoSection) pagoSection.classList.remove("hidden");
 		} else {
-			// Usuario no logueado: mostrar sección de login
 			if (loginSection) loginSection.classList.remove("hidden");
 			if (pagoSection) pagoSection.classList.add("hidden");
 		}
 	}
 
-	// Hacer función global
 	window.updatePagoUI = updateUI;
 
-	// Flash toast
 	(function flash() {
 		try {
 			const msg = sessionStorage.getItem("flashToast");
@@ -37,7 +33,6 @@
 		} catch {}
 	})();
 
-	// Login en la página de pago
 	formLogin?.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const usuario = document.getElementById("loginUsuario").value.trim();
@@ -70,7 +65,6 @@
 		}
 	});
 
-	// Logout
 	btnLogout?.addEventListener("click", () => {
 		if (window.Auth?.logout) {
 			window.Auth.logout();
@@ -84,7 +78,6 @@
 		}
 	});
 
-	// Procesar pago
 	formPago?.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const user = window.Auth?.getCurrentUser?.();
@@ -106,7 +99,16 @@
 			return;
 		}
 
-		if (codigo === user.codigo) {
+		const userData = Auth.getCurrentUserData();
+		
+		if (!userData) {
+			if (window.Toast?.show) {
+				Toast.show("Error: No se pudieron obtener los datos del usuario");
+			}
+			return;
+		}
+
+		if (codigo === userData.codigo) {
 			Storage.clearCart();
 			if (window.Toast?.show) {
 				Toast.show("Pago exitoso");
@@ -125,7 +127,6 @@
 	updateUI();
 	
 	document.addEventListener('DOMContentLoaded', function() {
-		// Esperar un poco más para que nav-auth.js termine
 		setTimeout(function() {
 			updateUI();
 			if (window.updateIndicator) {
